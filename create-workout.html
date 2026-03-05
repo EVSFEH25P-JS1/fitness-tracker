@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Fitness Tracker - JavaScript 1</title>
+    <script src="pages/create-workout.js" type="module"></script>
+
+    <link href="create-workout.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Skapa träningspass</h1>
+    </header>
+
+    <main>
+      <form id="create-exercise-form">
+        <section>
+          <label>Titel</label>
+          <input id="title-input" />
+        </section>
+
+        <section>
+          <label>Datum</label>
+          <input id="date-input" type="date" />
+        </section>
+
+        <section>
+          <div>
+            <h2>Övningar</h2>
+            <button id="add-exercise-btn" type="button">Lägg till</button>
+          </div>
+
+          <div id="exercises-container"></div>
+        </section>
+
+        <section id="status"></section>
+
+        <button type="submit">Spara</button>
+      </form>
+    </main>
+  </body>
+</html>
