@@ -58,14 +58,8 @@ function renderWorkout(parent, index, workout) {
     const startWorkoutBtn = document.createElement("button");
     startWorkoutBtn.textContent = "Starta pass";
 
-    // Temporär lösning bara för att testa completed-funktionalitet
     startWorkoutBtn.addEventListener("click", () => {
-      const workouts = getWorkouts();
-      // Vi hittar rätt pass via id och markerar det som avklarat
-      const w = workouts.find((all) => all.id === workout.id);
-      w.completed = true;
-      // Vi renderar om med den uppdaterade listan
-      renderWorkouts(workouts);
+      window.location.href = "/active-workout.html?workoutId=" + workout.id;
     });
 
     article.append(startWorkoutBtn);
