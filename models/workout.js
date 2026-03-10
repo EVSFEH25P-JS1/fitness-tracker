@@ -9,6 +9,8 @@ export class Workout {
     this.exercises = exercises;
     // Alla pass börjar som ej avklarade
     this.completed = false;
+    this.startTime = null;
+    this.endTime = null;
   }
 }
 
