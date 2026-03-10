@@ -4,6 +4,7 @@ import { activeWorkout } from "./workout.js";
 const activeExerciseTimerEl = document.getElementById("exercise-timer");
 const activeExerciseH2 = document.querySelector("#active-exercise h2");
 const activeExerciseStartBtn = document.getElementById("start-exercise");
+const activeExerciseNextBtn = document.getElementById("next-exercise");
 const activeExerciseForm = document.getElementById("active-exercise-form");
 const activeExerciseSetsEl = document.getElementById("active-exercise-sets");
 const activeExerciseRepsEl = document.getElementById("active-exercise-reps");
@@ -71,8 +72,10 @@ export function renderActiveExercise(exercise) {
 
   if (!activeWorkout.exerciseTimer) {
     activeExerciseStartBtn.disabled = false;
+    activeExerciseNextBtn.disabled = false;
   } else {
     activeExerciseStartBtn.disabled = true;
+    activeExerciseNextBtn.disabled = true;
   }
 }
 

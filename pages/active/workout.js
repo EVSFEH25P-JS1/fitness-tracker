@@ -12,6 +12,7 @@ const workoutId = Number.parseInt(searchParams.get("workoutId"));
 const h1 = document.querySelector("h1");
 const workoutTimerEl = document.getElementById("workout-timer");
 const activeExerciseStartBtn = document.getElementById("start-exercise");
+const activeExerciseNextBtn = document.getElementById("next-exercise");
 
 export const activeWorkout = {
   workout: null,
@@ -39,6 +40,24 @@ activeExerciseStartBtn.addEventListener("click", () => {
   const exercise =
     activeWorkout.workout.exercises[activeWorkout.activeExerciseIndex];
   startExerciseSet(exercise);
+  renderActiveExercise(exercise);
+});
+
+activeExerciseNextBtn.addEventListener("click", () => {
+  if (activeWorkout.exerciseTimer) {
+    return;
+  }
+
+  activeWorkout.activeExerciseIndex++;
+  if (
+    activeWorkout.activeExerciseIndex >= activeWorkout.workout.exercises.length
+  ) {
+    // TODO: Either send to home page directly, or just pause
+    return;
+  }
+
+  const exercise =
+    activeWorkout.workout.exercises[activeWorkout.activeExerciseIndex];
   renderActiveExercise(exercise);
 });
 
