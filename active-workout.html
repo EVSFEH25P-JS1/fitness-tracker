@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Fitness Tracker - JavaScript 1</title>
-    <script src="pages/active-workout.js" type="module"></script>
+    <script src="pages/active/workout.js" type="module"></script>
 
     <link href="active-workout.css" rel="stylesheet" />
   </head>
@@ -17,6 +17,15 @@
       <span id="workout-timer">00:00</span>
     </header>
 
-    <main></main>
+    <main>
+      <section id="active-exercise">
+        <h2>Övning</h2>
+        <span id="exercise-timer">00:00</span>
+        <div id="active-exercise-sets">Sets: 0</div>
+        <div id="active-exercise-reps">Reps: 0</div>
+        <button id="start-exercise">Starta övning</button>
+        <div id="active-exercise-form"></div>
+      </section>
+    </main>
   </body>
 </html>
